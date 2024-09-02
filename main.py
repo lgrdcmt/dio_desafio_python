@@ -27,7 +27,7 @@ while True:
             print("Deposito não realizado, pois não é permitido depósito com valor de zero ou negativos.\nTente novamente!")
     
 
-    elif opcao == 2:
+    if opcao == 2:
         print("Sacar")
         sacar = float(input("Qual o valor que deseja sacar: "))
 
@@ -46,7 +46,7 @@ while True:
             print("Saque não realizado, pois não é permitido saques com valor de zero ou negativos.\nTente novamente!")
     
     
-    elif opcao == 3:
+    if opcao == 3:
         print("Extrato")
         if len(extrato) == 0:
             print('Não existem movimentações')
@@ -55,9 +55,9 @@ while True:
             print(f'\n\nSALDO: R${saldo:.2f}')
 
 
-    elif opcao == 0:
+    if opcao == 0:
         print("Obrigado pela preferência!")
         break
 
-    else:
+    if opcao not in [1,2,3,0]:
         print("Opção inválida, tente novamente")
