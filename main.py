@@ -40,8 +40,9 @@ while True:
                 print("Saque não realizado, pois excedeu o quantidade de saques permitidos!")
             else:
                 saldo -= sacar
+                numero_saques += 1
                 extrato.append(f'Saque:- R$ {sacar:.2f}')
-                numero_saques = numero_saques + 1
+
         else:
             print("Saque não realizado, pois não é permitido saques com valor de zero ou negativos.\nTente novamente!")
     
